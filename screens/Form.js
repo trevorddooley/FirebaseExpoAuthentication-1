@@ -5,6 +5,9 @@ import Input from '../components/Input';
 import Button from '../components/Button';
 import { StyleSheet, Text, SafeAreaView, Dimensions  } from 'react-native';
 import MapView from 'react-native-maps';
+import DocumentPicker from 'react-native-document-picker';
+
+
 
 const STYLES = ['default', 'dark-content', 'light-content'];
 const TRANSITIONS = ['fade', 'slide', 'none'];
@@ -12,7 +15,7 @@ const TRANSITIONS = ['fade', 'slide', 'none'];
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#D3D3D3',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -23,28 +26,28 @@ const styles = StyleSheet.create({
 });
 
 function MemberSign({navigation}) {
-  const [userName, setAnimalSpecies] = useState(null);
-  const [userSurName, setAnimalAge] = useState(null);
-  const [userAge, setUserAge] = useState(null);
-  const [userMail, setUserMail] = useState(null);
+  const [animalSpecies, setAnimalSpecies] = useState(null);
+  const [animalAge, setAnimalAge] = useState(null);
+  const [dateTime, setDateTime] = useState(null);
+  const [deceased, setDeceased] = useState(null);
 
   function handleSubmit() {
-    if (!userName || !userSurName || !userAge || !userMail) {
-      Alert.alert('Tiger Fitness Salonu', 'Bilgiler boş bırakılamaz!');
+    if (!animalSpecies || !animalAge || !dateTime || !deceased) {
+      Alert.alert('Submission Failed', 'One or more fields is incorrect.');
       return;
     }
 
     const animal = {
       animalSpecies,
       animalAge,
-      userAge,
-      userMail,
+      dateTime,
+      deceased,
     };
     navigation.navigate('MemberResultScreen', {animal});
   }
 
   return (
-<SafeAreaView style={{ flex: 1 }}>
+    <SafeAreaView style={{ flex: 1 }}>
       {/* <Text>Member Sign</Text> */}
       <View style={styles.container}>
         <MapView style={styles.map} />
@@ -63,12 +66,12 @@ function MemberSign({navigation}) {
       <Input
         label="Date and Time"
         placeholder="Select the date and time..."
-        onChangeText={setUserAge}
+        onChangeText={setDateTime}
       />
       <Input
-        label="Deceases?"
+        label="Deceased?"
         placeholder="Yes or No..."
-        onChangeText={setUserMail}
+        onChangeText={setDeceased}
       />
       <Button text="Complete Submission" onPress={handleSubmit} />
     </SafeAreaView>
