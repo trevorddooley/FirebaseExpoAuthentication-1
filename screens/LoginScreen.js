@@ -9,15 +9,15 @@ const LoginScreen = () => {
 
   const navigation = useNavigation()
 
-  /*useEffect(() => {
+  useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged(user => {
       if (user) {
-        navigation.replace("HomeScreen.js")
+        navigation.replace("Home")
       }
     })
 
     return unsubscribe
-  }, [])*/
+  }, [])
 
   const handleSignUp = () => {
     auth
@@ -39,15 +39,9 @@ const LoginScreen = () => {
       .catch(error => alert(error.message))
   }
 
-  function LoginScreen({navigation}) {
-    function goToHomeScreen() {
-      navigation.navigate('HomeScreen');
-    }
-  
-
   return (
     <KeyboardAvoidingView
-    //  style={styles.container}
+      style={styles.container}
       behavior="padding"
     >
       <View style={styles.inputContainer}>
@@ -81,10 +75,10 @@ const LoginScreen = () => {
         </TouchableOpacity>
       </View>
     </KeyboardAvoidingView>
-    )
-  }
+  )
 }
-//export default LoginScreen
+
+export default LoginScreen;
 
 const styles = StyleSheet.create({
   container: {
@@ -132,5 +126,3 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
 })
-
-export default LoginScreen;

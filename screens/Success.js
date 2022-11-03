@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Text, StyleSheet, SafeAreaView} from 'react-native';
 
-function MemberResult({route}) {
+function Success({route}) {
   const {animal} = route.params;
 
   return (
@@ -29,4 +29,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default MemberResult;
+export default Success;
