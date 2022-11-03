@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
   },
 });
 
-function MemberSign({navigation}) {
+function Form({navigation}) {
   const [animalSpecies, setAnimalSpecies] = useState(null);
   const [animalAge, setAnimalAge] = useState(null);
   const [dateTime, setDateTime] = useState(null);
@@ -47,7 +47,7 @@ function MemberSign({navigation}) {
       dateTime,
       deceased,
     };
-    navigation.navigate('MemberResultScreen', {animal});
+    navigation.navigate('Success', {animal});
   }
 
   useEffect(() => {
@@ -91,4 +91,4 @@ function MemberSign({navigation}) {
   );
 }
 
-export default MemberSign;
+export default Form;
