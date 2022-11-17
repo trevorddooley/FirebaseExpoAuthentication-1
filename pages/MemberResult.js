@@ -40,9 +40,12 @@ function writeUserData(animalSpecies, animalAge, dateTime, deceased) {
 function MemberResult({route}, {navigation}) {
   const {animal} = route.params;
   function handleAgain() {
-    navigation.navigate('MemberSignScreen');
+    return;
    }
    function handleHome() {
+      return;
+     }
+     function handleNext() {
       return;
      }
   return (
@@ -55,7 +58,10 @@ function MemberResult({route}, {navigation}) {
       <Text style={styles.label}>Deceased?: {animal.deceased}</Text>
       <Text style={styles.label}>Location: {animal.location}</Text>
       <SafeAreaView>
-          <Button text="Submit Another" onPress={() => navigation.navigate('MemberSignScreen')}  />
+          <Button text="Submit Another" onPress={handleAgain} />
+      </SafeAreaView>
+      <SafeAreaView>
+          <Button text="Landing Page" onPress={handleNext} />
       </SafeAreaView>
       <SafeAreaView>
           <Button text="Return Home" onPress={handleHome} />

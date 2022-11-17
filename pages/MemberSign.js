@@ -102,14 +102,14 @@ function MemberSign({navigation}) {
             <MapView style={styles.map}
               initialRegion={{
                 latitude: 37.78825,
-                longitude: -122.4324,
+                longitude: -98.4324,
                 latitudeDelta: 0.0,
                 longitudeDelta: 0.0,
               }}
             >
             <MapView.Marker
-              coordinate={{latitude: 37.78825,
-              longitude: -122.4324}}
+              coordinate={{latitude: 37.0902,
+              longitude: -98.4324}}
               title={"title"}
               description={"description"}
             />
