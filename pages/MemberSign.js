@@ -73,10 +73,10 @@ function MemberSign({navigation}) {
 
 
   function handleSubmit() {
-    if (!animalSpecies || !animalAge || !date || !deceased || !time || !location) {
+    /*if (!animalSpecies || !animalAge || !date || !deceased || !time || !location) {
       Alert.alert('Submission Failed', 'One or more fields is missing or incorrect.');
       return;
-    }
+    }*/
 
 
     const animal = {
@@ -88,7 +88,7 @@ function MemberSign({navigation}) {
       location,
     };
   
-  navigation.navigate('MemberResult', {animal});
+  navigation.navigate('MemberResultScreen', {animal});
   }
 
   return (
