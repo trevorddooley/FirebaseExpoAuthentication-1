@@ -5,8 +5,8 @@ import Button from '../components/Button';
 
 function Welcome({navigation}) {
   function goToMemberSign() {
-    //navigation.navigate('MemberSignScreen');
-    navigation.navigate('FirebaseTestScreen');
+    navigation.navigate('MemberSignScreen');
+    //navigation.navigate('FirebaseTestScreen');
   }
   return (
     <View style={styles.container}>
