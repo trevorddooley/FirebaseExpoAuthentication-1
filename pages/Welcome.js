@@ -1,10 +1,12 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
+import { NativeScreenNavigationContainer } from 'react-native-screens';
 import Button from '../components/Button';
 
 function Welcome({navigation}) {
   function goToMemberSign() {
-    navigation.navigate('MemberSignScreen');
+    //navigation.navigate('MemberSignScreen');
+    navigation.navigate('FirebaseTestScreen');
   }
   return (
     <View style={styles.container}>

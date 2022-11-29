@@ -6,7 +6,15 @@ import Button from '../components/Button';
 import { StyleSheet, Text, SafeAreaView, Dimensions  } from 'react-native';
 import MapView from 'react-native-maps';
 import DocumentPicker from 'react-native-document-picker';
-import DatePicker from 'react-native-date-picker';
+//import DatePicker from 'react-native-date-picker';
+//import database from '@react-native-firebase/database';
+
+//import { firebase } from '@react-native-firebase/database';
+
+/*const reference = firebase
+  .app()
+  .database('https://console.firebase.google.com/u/0/project/apcs360-9ac59/database/apcs360-9ac59-default-rtdb/data/~2F')
+  .ref('/users/123');*/
 
 const STYLES = ['default', 'dark-content', 'light-content'];
 const TRANSITIONS = ['fade', 'slide', 'none'];
@@ -177,8 +185,18 @@ function MemberSign({navigation}) {
         </SafeAreaView>
         </View>
       </TouchableWithoutFeedback>
-    </KeyboardAvoidingView> 
+    </KeyboardAvoidingView>
   );
 }
+/*reference()
+  .ref('/users/123')
+  .set({
+    Age: setAnimalAge,
+    Species: setAnimalSpecies,
+    Date: setDate,
+    Deceased_Status: setDeceased,
+    Time: setTime,
+  })
+  .then(() => console.log('Data set.'));*/
 
 export default MemberSign;

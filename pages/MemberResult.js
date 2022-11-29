@@ -98,10 +98,10 @@ const styles = StyleSheet.create({
   },
   message: {
     fontWeight: 'bold',
-    fontSize: 30,
+    fontSize: 28,
     textAlign: 'center',
     color: '#9fa8da',
-    margin: 30,
+    margin: 25,
   },
   map: {
     height: '100%',
