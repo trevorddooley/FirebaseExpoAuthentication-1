@@ -1,3 +1,5 @@
+//Redunant testing
+
 /*import React,{useState,useEffect} from 'react'
 import { Text, View,TextInput,TouchableOpacity,FlatList ,Keyboard} from 'react-native';
 import { firebase } from "../firebase/config";

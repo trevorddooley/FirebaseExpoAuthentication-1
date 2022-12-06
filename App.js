@@ -5,8 +5,6 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 //Import files needed to creat navigation stack
 import Welcome from './pages/Welcome';
-import MemberSign from './pages/MemberSign';
-import MemberResult from './pages/MemberResult';
 import LoginScreen from './screens/LoginScreen';
 import FirebaseTest from './pages/FirebaseTest';
 import FirebaseResult from './pages/FirebaseResult';
