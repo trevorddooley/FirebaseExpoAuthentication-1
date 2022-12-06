@@ -1,12 +1,13 @@
+//Import dependencies for placeholder:welcome page after logging in
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import { NativeScreenNavigationContainer } from 'react-native-screens';
 import Button from '../components/Button';
 
+//Navigate to form
 function Welcome({navigation}) {
   function goToMemberSign() {
-    navigation.navigate('MemberSignScreen');
-    //navigation.navigate('FirebaseTestScreen');
+    navigation.navigate('FirebaseTestScreen');
   }
   return (
     <View style={styles.container}>
@@ -16,6 +17,7 @@ function Welcome({navigation}) {
   );
 }
 
+//Standard styling
 const styles = StyleSheet.create({
   container: {
     flex: 1,
