@@ -9,6 +9,7 @@ const [password, setPassword] = useState('')
 
 const navigation = useNavigation()
 
+//Saving logout functionality but unused
   /*useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged(user => {
       if (user) {
